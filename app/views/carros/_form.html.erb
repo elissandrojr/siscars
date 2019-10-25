@@ -1,0 +1,48 @@
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">Veículos</h1>
+  <%= link_to carros_path, class: 'd-none d-sm-inline-block btn btn-md btn-danger shadow-sm' do  %>
+  <i class="fas fa-angle-left"></i> Voltar
+  <% end %>
+</div>
+
+
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Basic Card Example</h6>
+  </div>
+  <div class="card-body">
+  <%= simple_form_for(@carro) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+     <div class="row"> 
+      <div class="col-md-8">
+        <%= f.input :proprietario %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :exercicio %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :modelo %>
+      </div>
+      <div class="col-md-2">
+        <%= f.input :placa %>
+      </div>
+      <div class="col-md-2">
+        <%= f.input :renavam %>
+      </div>
+      <div class="col-md-2">
+       <%= f.input :chassi %>
+      </div>
+      <div class="col-md-2">
+        <%= f.input :ano %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, class: 'btn btn-success' %>
+    </div>
+  <% end %>
+  </div>
+</div>
+

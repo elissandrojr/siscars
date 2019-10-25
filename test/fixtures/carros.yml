@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  proprietario: MyString
+  exercicio: MyString
+  placa: MyString
+  renavam: MyString
+  chassi: MyString
+  modelo: MyString
+  ano: MyString
+
+two:
+  proprietario: MyString
+  exercicio: MyString
+  placa: MyString
+  renavam: MyString
+  chassi: MyString
+  modelo: MyString
+  ano: MyString
