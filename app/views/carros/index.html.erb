@@ -32,7 +32,6 @@
           <tr>
             <th>Status</th>
             <th>Proprietario</th>
-            <th>Exercicio</th>
             <th>Placa</th>
             <th>Renavam</th>
             <th>Chassi</th>
@@ -47,26 +46,25 @@
             <tr>
               <td>
                 <% if carro.exercicio <= Time.new.year %>
-                  <span class="btn btn-danger">Vencido</span>                  
+                  <span class="badge badge-danger">Vencido <%= carro.exercicio %></span>                  
                 <% else %>
-                  <span class="btn btn-success">Regular</span>                  
+                  <span class="badge badge-success">Regular <%= carro.exercicio %></span>                   
                 <% end %>
               </td>
               <td><%= carro.proprietario %></td>
-              <td><%= carro.exercicio %></td>
               <td nowrap><%= carro.placa %></td>
               <td><%= carro.renavam %></td>
               <td><%= carro.chassi %></td>
               <td><%= carro.modelo %></td>
               <td><%= carro.ano %></td>
-              <td>
-              <%= link_to carro_path(carro), class: 'btn' do %>
+              <td nowrap>
+              <%= link_to carro_path(carro), class: 'btn btn-primary' do %>
                 <i class="fas fa-eye"></i>
               <% end %>
-              <%= link_to edit_carro_path(carro), class: 'btn' do %>
+              <%= link_to edit_carro_path(carro), class: 'btn btn-info' do %>
                 <i class="fas fa-edit"></i>
               <% end %>
-              <%= link_to carro_path(carro), method: :delete, data: { confirm: 'Deseja apagar?' }, class: 'btn' do %>
+              <%= link_to carro_path(carro), method: :delete, data: { confirm: 'Deseja apagar?' }, class: 'btn btn-danger' do %>
                 <i class="fas fa-trash-alt"></i>
               <% end %>
               </td>

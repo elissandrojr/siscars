@@ -1,39 +1,70 @@
-<p id="notice"><%= notice %></p>
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">Veículos</h1>
+  <%= link_to carros_path, class: 'd-none d-sm-inline-block btn btn-md btn-primary shadow-sm' do  %>
+  <i class="fas fa-plus"></i> Voltar
+  <% end %>
+</div>
 
-<p>
-  <strong>Proprietario:</strong>
-  <%= @carro.proprietario %>
-</p>
+<div class="card shadow mb-4">
+  <!-- Card Header - Dropdown -->
+  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+    <h6 class="m-0 font-weight-bold text-primary">Ficha do veículos</h6>
+  </div>
+  <!-- Card Body -->
+  <div class="card-body">
+    <div class="row">
 
-<p>
-  <strong>Exercicio:</strong>
-  <%= @carro.exercicio %>
-</p>
+      <div class="col-md-4">
+      <div class="form-group">
+      <strong>Proprietario:</strong>
+      <%= @carro.proprietario %>
+      </div>
+      </div>
 
-<p>
-  <strong>Placa:</strong>
-  <%= @carro.placa %>
-</p>
+      <div class="col-md-4">
+      <div class="form-group">
+      <strong>Exercicio:</strong>
+      <%= @carro.exercicio %>
+      </div>
+      </div>
 
-<p>
-  <strong>Renavam:</strong>
-  <%= @carro.renavam %>
-</p>
+      <div class="col-md-4">
+      <div class="form-group">
+      <strong>Placa:</strong>
+      <%= @carro.placa %>
+      </div>
+      </div>
 
-<p>
-  <strong>Chassi:</strong>
-  <%= @carro.chassi %>
-</p>
+      <div class="col-md-4">
+      <div class="form-group">
+      <strong>Renavam:</strong>
+      <%= @carro.renavam %>
+      </div>
+      </div>
 
-<p>
-  <strong>Modelo:</strong>
-  <%= @carro.modelo %>
-</p>
+      <div class="col-md-4">
+      <div class="form-group">
+      <strong>Chassi:</strong>
+      <%= @carro.chassi %>
+      </div>
+      </div>
 
-<p>
-  <strong>Ano:</strong>
-  <%= @carro.ano %>
-</p>
+      <div class="col-md-4">
+      <div class="form-group">
+      <strong>Modelo:</strong>
+      <%= @carro.modelo %>
+      </div>
+      </div>
 
-<%= link_to 'Edit', edit_carro_path(@carro) %> |
-<%= link_to 'Back', carros_path %>
+      <div class="col-md-4">
+      <div class="form-group">
+      <strong>Ano:</strong>
+      <%= @carro.ano %>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
