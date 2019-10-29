@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     resources :file_doc, only: [:new, :create, :destroy]
   end
 
-  root to: 'carros#index'
+  root to: 'painel#index'
 end
