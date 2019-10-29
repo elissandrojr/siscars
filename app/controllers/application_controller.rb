@@ -2,6 +2,9 @@ class ApplicationController < ActionController::Base
     before_action :authenticate_usuario!
     layout :layout_by
   
+    include Pagy::Backend
+  
+  
     protected
   
     def layout_by
