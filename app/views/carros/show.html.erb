@@ -1,8 +1,8 @@
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
   <h1 class="h3 mb-0 text-gray-800">Veículos</h1>
-  <%= link_to carros_path, class: 'd-none d-sm-inline-block btn btn-md btn-primary shadow-sm' do  %>
-  <i class="fas fa-plus"></i> Voltar
+  <%= link_to carros_path, class: 'd-none d-sm-inline-block btn btn-md btn-danger shadow-sm' do  %>
+  <i class="fas fa-angle-left"></i> Voltar
   <% end %>
 </div>
 
@@ -63,6 +63,26 @@
       <%= @carro.ano %>
       </div>
       </div>
+
+      <div class="col-md-12">
+      <div class="form-group">
+      
+        <h5>Documentos</h5> 
+        <ul>
+          <% @carro.files.each do |file| %>
+            <li style="margin-bottom:10px;">
+              <%= link_to file.filename, url_for(file) %>
+              <%= link_to  carro_file_doc_path(@carro, file), method: :delete, data: { confirm: "Tem certeza?" }, class: 'btn btn-danger' do  %>
+              <i class="fas fa-trash-alt"></i>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+
+        <%= link_to 'Enviar Documento', new_carro_file_doc_path(@carro), class: 'btn btn-primary' %>
+      </div>
+      </div>
+
     </div>
   </div>
 </div>
