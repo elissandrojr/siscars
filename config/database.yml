@@ -18,5 +18,3 @@ test:
 production:
   <<: *default
   database: siscar_production
-  username: siscar
-  password: <%= ENV['SISCAR_DATABASE_PASSWORD'] %>
