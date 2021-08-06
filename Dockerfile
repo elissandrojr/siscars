@@ -9,13 +9,13 @@ ENV LC_ALL pt_BR.UTF-8
 ENV LANG pt_BR.UTF-8
 ENV LANGUAGE pt_BR.UTF-8
 
-RUN mkdir -p /app
-WORKDIR /app
+RUN mkdir -p /siscar
+WORKDIR /siscar
 
 RUN gem install rails
 RUN gem install nokogiri
 
-COPY . /app
+COPY . /siscar
 
 COPY start.sh /
 
